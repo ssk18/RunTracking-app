@@ -34,3 +34,11 @@ fun Duration.toFormattedPace(distanceKm: Double): String {
 
     return "$avgPaceMinutes:$avgPaceSeconds / km"
 }
+
+fun Double.toFormattedKmh(): String {
+    return "${roundToDecimals(1)}"
+}
+
+fun Int.toFormattedMeters(): String {
+    return "$this m"
+}
