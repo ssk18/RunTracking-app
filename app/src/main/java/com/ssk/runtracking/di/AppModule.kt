@@ -4,6 +4,8 @@ import android.content.SharedPreferences
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKey
 import com.ssk.runtracking.MainViewModel
+import com.ssk.runtracking.RunTrackingApp
+import kotlinx.coroutines.CoroutineScope
 import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
@@ -19,4 +21,7 @@ val appModule = module {
         )
     }
     singleOf(::MainViewModel)
+    single<CoroutineScope> {
+        (androidApplication() as RunTrackingApp).applicationScope
+    }
 }

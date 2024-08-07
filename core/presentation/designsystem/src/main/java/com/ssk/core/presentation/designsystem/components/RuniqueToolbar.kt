@@ -79,12 +79,14 @@ fun RuniqueToolbar(
             containerColor = Color.Transparent
         ),
         navigationIcon = {
-            IconButton(onClick = onBackClick) {
-                Icon(
-                    imageVector = ArrowLeftIcon,
-                    contentDescription = stringResource(R.string.back_button),
-                    tint = MaterialTheme.colorScheme.onBackground
-                )
+            if(showBackButton) {
+                IconButton(onClick = onBackClick) {
+                    Icon(
+                        imageVector = ArrowLeftIcon,
+                        contentDescription = stringResource(id = R.string.back_button),
+                        tint = MaterialTheme.colorScheme.onBackground
+                    )
+                }
             }
         },
         actions = {

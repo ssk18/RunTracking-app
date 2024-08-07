@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
                         val navController = rememberNavController()
                         NavigationRoot(
                             navController = navController,
-                            isLoggingIn = viewModel.state.isLoggingIn
+                            isLoggingIn = viewModel.state.isLoggedIn
                         )
                     }
                 }

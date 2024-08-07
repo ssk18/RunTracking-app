@@ -59,7 +59,7 @@ fun LoginScreenRoot(
                     context.getString(R.string.login_successful),
                     Toast.LENGTH_LONG
                 ).show()
-                onLoginSuccess
+                onLoginSuccess()
             }
 
             is LoginEvents.Error -> {

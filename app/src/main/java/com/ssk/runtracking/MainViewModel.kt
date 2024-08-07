@@ -19,10 +19,9 @@ class MainViewModel(
         viewModelScope.launch {
             state = state.copy(isCheckingAuth = true)
             state = state.copy(
-                isLoggingIn = sessionStorage.get() != null
+                isLoggedIn = sessionStorage.get() != null
             )
             state = state.copy(isCheckingAuth = false)
         }
     }
-
 }
