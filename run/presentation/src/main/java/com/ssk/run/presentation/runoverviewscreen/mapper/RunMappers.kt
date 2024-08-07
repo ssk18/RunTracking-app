@@ -14,7 +14,7 @@ fun Run.toRunUi(): RunUi {
     val dateTimeInLocalTime = dateTimeUtc
         .withZoneSameInstant(ZoneId.systemDefault())
     val formattedDateTime = DateTimeFormatter
-        .ofPattern("mmm dd, yyyy - hh:mma")
+        .ofPattern("MMM dd, yyyy - hh:mma")
         .format(dateTimeInLocalTime)
 
     val distanceInKm = distanceInMeters / 1000.0
