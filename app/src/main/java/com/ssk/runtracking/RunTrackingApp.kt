@@ -4,6 +4,7 @@ import android.app.Application
 import com.ssk.auth.data.data.di.authDataModule
 import com.ssk.auth.presentation.di.authViewModel
 import com.ssk.core.data.di.coreDataModule
+import com.ssk.core.database.di.databaseModule
 import com.ssk.run.location.di.locationModule
 import com.ssk.run.presentation.di.runOverviewModule
 import com.ssk.runtracking.di.appModule
@@ -34,7 +35,8 @@ class RunTrackingApp : Application() {
                 appModule,
                 coreDataModule,
                 runOverviewModule,
-                locationModule
+                locationModule,
+                databaseModule
             )
         }
     }
